@@ -13,21 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <QueryClientProvider client={queryClient}>
         <ConfigProvider
           theme={{
-            components: {
-              // Button: {
-              //   colorPrimary: '#2E2466',
-              // },
-              // Input: {
-              //   controlItemBgActiveHover: '#2E2466',
-              //   hoverBorderColor: '#2E2466',
-              //   colorPrimary: '#2E2466',
-              //   colorInfoHover: '#2E2466',
-              //   colorIconHover: '#2E2466',
-              //   colorInfoTextHover: '#2E2466',
-              //   colorInfoBorderHover: '#2E2466',
-              //   colorPrimaryBorderHover: '#2E2466',
-              // },
-            },
+            components: {},
           }}
         >
           <Component {...pageProps} />

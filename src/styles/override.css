@@ -10,9 +10,26 @@ p {
 .ant-input-outlined:hover,
 .ant-input-outlined:focus-within,
 .ant-input-outlined:active {
-  border-color: #2e2466;
+  border-color: #84272c;
 }
 .ant-btn-primary:not(:disabled),
 .ant-btn-primary:hover:not(:disabled) {
-  background: #2e2466 !important;
+  background: #84272c !important;
+}
+
+.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+  color: #84272c !important;
+  font-weight: bold;
+  border-color: #84272c !important;
+}
+
+.ant-radio-button-wrapper.ant-radio-button-wrapper-checked:not(
+    .ant-radio-button-wrapper-disabled
+  )::before {
+  background-color: #84272c !important;
+}
+
+* {
+  -webkit-text-size-adjust: none !important;
+  text-size-adjust: none !important;
 }

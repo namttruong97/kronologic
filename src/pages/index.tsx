@@ -1,8 +1,10 @@
-import { Form } from 'antd';
+import CardGroup from 'components/CardGroup';
+import { Layout } from 'components/Layout';
 
 export default function Homepage() {
-  const [form] = Form.useForm();
-  console.log('form', form);
-
-  return <div>123</div>;
+  return (
+    <Layout title="Kronologic Paris 1920">
+      <CardGroup />
+    </Layout>
+  );
 }

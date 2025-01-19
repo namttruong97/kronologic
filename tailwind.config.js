@@ -7,9 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-pattern': "url('/image/bgBox.jpg')",
+      },
+      fontFamily: {
+        title: ['"Playwrite IN"', 'serif'],
+      },
       colors: {
         default: '#333333',
-        primary: '#1890ff',
+        primary: '#84272C',
         secondary: '#888990',
         'purple-primary': '#2E2466',
         'gray-bold': '#161617',
