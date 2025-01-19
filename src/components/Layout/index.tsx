@@ -1,6 +1,7 @@
 import { FC, HTMLAttributes, useEffect, useState } from 'react';
 
 import { AnimatePresence, motion } from 'framer-motion';
+import { Metadata } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { classMapping } from 'utils/helper';
@@ -9,6 +10,12 @@ import { BlockLoading } from 'components/BlockLoading';
 import Header from 'components/Header/Header';
 
 export type ILayoutProps = HTMLAttributes<HTMLDivElement>;
+
+export const metadata: Metadata = {
+  title: 'Kronologic Paris 1920',
+  description: 'The app support checking result for Kronologic Paris 1920.',
+  metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+};
 
 export const Layout: FC<ILayoutProps> = ({ children, className, title }) => {
   const [isLoading, setLoading] = useState(true);
@@ -30,8 +37,6 @@ export const Layout: FC<ILayoutProps> = ({ children, className, title }) => {
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
-        <title>Kronologic Paris 1920</title>
-        <meta name="title" content="Kronologic Paris 1920" />
         <meta
           name="description"
           content="The app support checking result for Kronologic Paris 1920"
