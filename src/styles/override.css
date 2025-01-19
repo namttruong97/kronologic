@@ -1,0 +1,18 @@
+.ant-typography ul li,
+.ant-typography ol li {
+  margin: 0 !important;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+.ant-input-outlined:hover,
+.ant-input-outlined:focus-within,
+.ant-input-outlined:active {
+  border-color: #2e2466;
+}
+.ant-btn-primary:not(:disabled),
+.ant-btn-primary:hover:not(:disabled) {
+  background: #2e2466 !important;
+}
