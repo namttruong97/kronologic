@@ -30,6 +30,28 @@ export const Layout: FC<ILayoutProps> = ({ children, className, title }) => {
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
+        <title>Kronologic Paris 1920</title>
+        <meta name="title" content="Kronologic Paris 1920" />
+        <meta
+          name="description"
+          content="The app support checking result for Kronologic Paris 1920"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://metatags.io/" />
+        <meta property="og:title" content="Kronologic Paris 1920" />
+        <meta
+          property="og:description"
+          content="The app support checking result for Kronologic Paris 1920"
+        />
+        <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta property="twitter:title" content="Kronologic Paris 1920" />
+        <meta
+          property="twitter:description"
+          content="The app support checking result for Kronologic Paris 1920"
+        />
+        <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
       </Head>
 
       <AnimatePresence>
