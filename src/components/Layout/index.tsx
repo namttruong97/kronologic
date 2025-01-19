@@ -34,7 +34,7 @@ export const Layout: FC<ILayoutProps> = ({ children, className, title }) => {
 
       <AnimatePresence>
         <motion.div
-          className="h-[100vh]"
+          className="h-[100vh] sm:px-[30vw] 2xl:px-[35vw] m-auto overflow-hidden"
           key={router.route}
           initial="initialState"
           animate="animateState"
@@ -59,7 +59,7 @@ export const Layout: FC<ILayoutProps> = ({ children, className, title }) => {
           <Header />
           <div
             className={classMapping(
-              'flex flex-col px-4 h-full w-full relative overflow-hidden ',
+              'flex flex-col px-4 h-full w-full relative overflow-hidden border',
               className
             )}
           >
