@@ -85,9 +85,10 @@ export default function CheckPage() {
 
     return data?.map((item) => {
       const fieldType = get(fieldTypeQuest, item.type);
+      console.log('fieldType', fieldType);
       return (
         <div
-          className="flex items-center justify-center mb-5 bg-gray-100 py-6 rounded-lg shadow"
+          className="flex items-center justify-center py-6 mb-5 bg-gray-100 rounded-lg shadow"
           key={item.question}
         >
           <h3 className="w-[160px] mb-0">{item.question}</h3>
@@ -124,6 +125,8 @@ export default function CheckPage() {
         icon: 'success',
         confirmButtonText: 'Okay :)',
       });
+
+      form.resetFields(['character', 'room', 'time']);
       return;
     }
     Swal.fire({
@@ -132,11 +135,12 @@ export default function CheckPage() {
       icon: 'error',
       confirmButtonText: 'Okay :(',
     });
+    form.resetFields(['character', 'room', 'time']);
   };
 
   return (
     <Layout title={get(scenarioName, slugId)}>
-      <h2 className="text-center my-8 font-title font-bold">{get(scenarioName, slugId)}</h2>
+      <h2 className="my-8 font-bold text-center font-title">{get(scenarioName, slugId)}</h2>
 
       <Form
         form={form}
@@ -148,14 +152,14 @@ export default function CheckPage() {
         <Form.Item name="game">
           <Radio.Group className="grid grid-cols-5">
             {[1, 2, 3, 4, 5].map((gameNum) => (
-              <Radio.Button className="px-2" key={gameNum} value={gameNum}>
+              <Radio.Button className="px-2 text-center" key={gameNum} value={gameNum}>
                 Game {gameNum}
               </Radio.Button>
             ))}
           </Radio.Group>
         </Form.Item>
         {generateQuestion()}
-        <Form.Item label={null} className="text-center mt-10">
+        <Form.Item label={null} className="mt-10 text-center">
           <Button size="large" type="primary" htmlType="submit" disabled={disabledSave}>
             Check the answer
           </Button>
